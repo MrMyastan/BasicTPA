@@ -1,0 +1,42 @@
+name: BasicTPA
+main: games.skweekychair.basictpa.BasicTpaPlugin
+version: 1.3
+api-version: 1.16
+commands:
+   tprequest:
+      description: request 2 tp
+      usage: /<command> [player]
+      permission: basictpa.tprequest
+   tpaccept:
+      description: accept tp request
+      usage: /<command>
+      permission: basictpa.tpaccept
+   tpdeny:
+      description: deny tp request
+      usage: /<command>
+      permission: basictpa.tpdeny
+   tphere:
+      description: request for someone to tp to you
+      usage: /<command> [player]
+      permission: basictpa.tphere
+   tpback:
+      description: tp back to before your last tpa/here
+      usage: /<command>
+      permission: basictpa.tpback
+   tpview:
+      description: view current tp request
+      usage: /<command>
+      permission: basictpa.tpview
+permissions:
+   basictpa.tprequest:
+      default: true
+   basictpa.tpaccept:
+      default: true
+   basictpa.tpdeny:
+      default: true
+   basictpa.tphere:
+      default: true
+   basictpa.tpback:
+      default: true
+   basictpa.tpview:
+      default: true
