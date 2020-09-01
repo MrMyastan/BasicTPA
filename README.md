@@ -30,3 +30,4 @@ Any suggestions for improvements or features are welcome!
 # To-Do
 - [x] write this readme
 - [ ] comment my code
+- [ ] error handling
