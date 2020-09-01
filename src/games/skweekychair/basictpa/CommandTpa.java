@@ -15,9 +15,12 @@ public class CommandTpa implements CommandExecutor {
 	
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender instanceof Player) {
+        if (args.length == 0) {return false;}
+    	
+    	if (sender instanceof Player) {
         	Player player = (Player) sender;
         	Player receiver = Bukkit.getPlayerExact(args[0]);
+        	if (receiver == null) { return false;}
         	tpQueue.TELEPORT_REQUESTS.put(receiver, new TeleportRequest(player, false));
         	receiver.sendMessage(ChatColor.LIGHT_PURPLE + player.getName() + ChatColor.GOLD + " has requested to teleport to you! use /tpaccept to accept!");
         	return true;

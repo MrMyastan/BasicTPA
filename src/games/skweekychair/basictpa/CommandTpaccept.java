@@ -17,10 +17,7 @@ public class CommandTpaccept implements CommandExecutor {
         if (sender instanceof Player) {
         	Player player = (Player) sender;
         	TeleportRequest tpRequest = tpQueue.TELEPORT_REQUESTS.get(player);
-        	if (tpRequest == null) { 
-        		player.sendMessage(ChatColor.GOLD + "You have no teleport request, sorry!");
-        		return true;
-        	}
+        	if (tpRequest == null) {player.sendMessage(ChatColor.GOLD + "You have no teleport request, sorry!"); return true;}
         	if (!tpRequest.isReversed) {
         		System.out.println("!isreversed");
         		tpQueue.PREVIOUS_LOCATIONS.put(tpRequest.requestee, tpRequest.requestee.getLocation());
