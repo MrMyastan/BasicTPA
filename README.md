@@ -34,3 +34,4 @@ I've tested the plugin using a Spigot 1.16.1 server and made the plugin using th
 - [x] write this readme
 - [ ] comment my code
 - [x] error handling
+- [ ] rate limiting
